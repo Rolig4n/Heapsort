@@ -75,6 +75,7 @@ int main() {
 	heapsort(data, WIDTH);
 	cout << "After Sort:" << endl;
 	display(data, WIDTH);
+	system("pause");
 	delete [] data;
 }
 
