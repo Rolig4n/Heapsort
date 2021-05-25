@@ -1,8 +1,7 @@
 /*
  * Heapsort.cc
- *
- *  Created on: Nov 25, 2014
- *      Author: carl
+ * Created on: Nov 25, 2014 - Author: carl
+ * Atualizado em: May 05, 2021 - Author: Hiago R. Batista
  */
 
 #include <iostream>
@@ -12,7 +11,11 @@
 using std::cout;
 using std::endl;
 
-const size_t WIDTH = 100;
+/* 
+   Tamanho do array a ser gerado
+   Coloquei grande para dar graça e ver o potencial
+*/
+const size_t WIDTH = 1000000;
 
 void max_heapify(int *a, size_t location, size_t size) {
 	size_t maximum_location = location;
@@ -49,9 +52,10 @@ void heapsort(int *a, size_t size) {
 	}
 }
 
+/* Gera os Numeros a ordenar */
 void gen_random(int *a, size_t size) {
 	for(size_t i=0;i<size;++i) {
-		*(a+i) = random()/10000000;
+		*(a+i) = rand()%1000000;
 	}
 }
 
